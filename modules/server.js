@@ -3,13 +3,8 @@ var colors = require('colors');
 var handlers = require('./handlers');
 
 function start() {
-    console.log("uruchomiono funkcję start")
     function onRequest(request, response) {
-        console.log('Odebrano zapytanie.');
-        response.writeHead(200, {"Content-Type" : "text/plain"});
-        response.write('Pierwsze koty za płoty.');
-        response.end();
-    
+   
         switch (request.url) {
             case '/':
             case '/start':
@@ -27,8 +22,6 @@ function start() {
     }
     
     http.createServer(onRequest).listen(9000);
-
-    console.log("Uruchomiono serwer!".green);
 }
 
 exports.start = start;
