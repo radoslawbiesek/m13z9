@@ -14,7 +14,6 @@ exports.upload = function(request, response) {
 
 exports.welcome = function(request, response) {
     fs.readFile('./templates/index.html', function(err, html) {
-        console.log("serwuję html");
         response.writeHead(200, {"Content-Type" : "text/html; charset=utf-8"});
         response.write(html);
         response.end();
