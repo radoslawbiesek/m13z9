@@ -20,6 +20,14 @@ exports.welcome = function(request, response) {
     });
 }
 
+exports.style = function(request, response) {
+    fs.readFile('./templates/style.css', function(err, css) {
+        response.writeHead(200, {"Content-Type" : "text/css; charset=utf-8"});
+        response.write(css);
+        response.end();
+    });
+}
+
 exports.error = function(request, response) {
     response.write("404");
     response.end();
