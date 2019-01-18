@@ -30,4 +30,5 @@ input {
     width: 8em;
     height: 3em;
     margin: 1.5em auto;
+    cursor: pointer;
 }
